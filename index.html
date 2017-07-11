@@ -13,12 +13,17 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <style type="text/css">
-	.table. > tbody > tr > td{ border-bottom: 1px solid #fff;}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{border-bottom: 1px solid #fff;border-top: 1px solid #fff;}
+	.table. > tbody > tr > td{ border-bottom: 1px solid #fff;border-top: 1px solid #fff;}
+	.label{font-size: 90%;font-weight: 400;}
+	element.style {
+    border-bottom: 1px solid #fff;
+}
 	h4 { font-weight: bold;}
 	.bs-callout {
 	    padding: 20px;
 	    margin: 20px 0;
-	    border: 1px solid #eee;
+	    border: 1px solid #fff;
 	    border-left-width: 5px;
 	    border-radius: 3px;
 	}
@@ -36,40 +41,10 @@
 	    margin-top: -5px;
 	}
 	.bs-callout-default {
-	    border-left-color: #7F8C8D;
+	    border-left-color: #777;
 	}
 	.bs-callout-default h4 {
 	    color: #777;
-	}
-	.bs-callout-primary {
-	    border-left-color: #428bca;
-	}
-	.bs-callout-primary h4 {
-	    color: #428bca;
-	}
-	.bs-callout-success {
-	    border-left-color: #5cb85c;
-	}
-	.bs-callout-success h4 {
-	    color: #5cb85c;
-	}
-	.bs-callout-danger {
-	    border-left-color: #d9534f;
-	}
-	.bs-callout-danger h4 {
-	    color: #d9534f;
-	}
-	.bs-callout-warning {
-	    border-left-color: #f0ad4e;
-	}
-	.bs-callout-warning h4 {
-	    color: #f0ad4e;
-	}
-	.bs-callout-info {
-	    border-left-color: #1ABC9C;
-	}
-	.bs-callout-info h4 {
-	    color: #5bc0de;
 	}
 </style>
 </head>
@@ -82,9 +57,9 @@
 	<table class="table">
 		<tbody>
 			<tr>
-				<td>
-					<span class="glyphicon glyphicon-map-marker"></span>&nbsp;1228 Emerson Street, Evanston, IL 60201&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;773-569-9905&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<td style="border-top: 1px solid #fff; border-left: 4px solid #777;border-bottom: 1px solid #fff;">
+					<span class="glyphicon glyphicon-map-marker"></span>&nbsp;1228 Emerson Street, Evanston, IL 60201&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;773-569-9905&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;haosun2014@u.northwestern.edu
 				</td>
 			</tr>
@@ -95,116 +70,98 @@
 	<table class="table table-striped">
 		<tbody>
 			<tr>
-				<td class="col-xs-3" style="border-left: 4px solid #428bca; border-bottom: 1px solid #fff;">Programming</td>
-				<td class="col-xs-9" style="border-bottom: 1px solid #fff;">Java, Python</td>
+				<td class="col-xs-3" style="padding-left:26px;border-left: 4px solid #777; border-bottom: 1px solid #fff;">Programming</td>
+				<td class="col-xs-9" style="border-bottom: 1px solid #fff;">Java - 2 years, Python - 2 years</td>
 			</tr>
 			<tr>
-				<td class="col-xs-3" style="border-left: 4px solid #428bca;border-bottom: 1px solid #fff;">Database</td>
-				<td class="col-xs-9" style="border-bottom: 1px solid #fff;">SQL/NoSQL databases(MySQL, Oracle 11g, DynamoDB)</td>
+				<td class="col-xs-3" style="padding-left:26px;border-left: 4px solid #777;border-bottom: 1px solid #fff;">Database</td>
+				<td class="col-xs-9" style="border-bottom: 1px solid #fff;">SQL/NoSQL databases (MySQL, Oracle 11g, DynamoDB)</td>
 			</tr>
 			<tr>
-				<td class="col-xs-3" style="border-left: 4px solid #428bca;border-bottom: 1px solid #fff;">Internet Technologies</td>
-				<td class="col-xs-9" style="border-bottom: 1px solid #fff;">AWS, Docker, HTML5/CSS3/jQuery/AJAX, REST API</td>
+				<td class="col-xs-3" style="padding-left:26px;border-left: 4px solid #777;border-bottom: 1px solid #fff;">Internet Technologies</td>
+				<td class="col-xs-9" style="border-bottom: 1px solid #fff;">AWS, Docker, HTML5/JQuery/CSS3//AJAX, REST API</td>
 			</tr>
 			<tr>
-				<td class="col-xs-3" style="border-left: 4px solid #428bca;border-bottom: 1px solid #fff;">Framework & Tool</td>
-				<td class="col-xs-9" style="border-bottom: 1px solid #fff;">Spring MVC, Flask, Ant, Gradle, Ansible, Jenkins</td>
+				<td class="col-xs-3" style="padding-left:26px;border-left: 4px solid #777;border-bottom: 1px solid #fff;">Framework & Tool</td>
+				<td class="col-xs-9" style="border-bottom: 1px solid #fff;">Spring MVC, Ant, Gradle, Ansible, Jenkins</td>
 			</tr>
 		</tbody>
 	</table>
 
 	<h4>Professional Experience</h4>
-	<div class="bs-callout bs-callout-primary">
-		<p style="font-weight:bold;font-size:14px">Software Engineer, 9/15 to Present – Harbor Capital Advisors, Chicago, IL</p>
-
-
+	<div class="bs-callout bs-callout-default">
+		<p style="font-weight:bold;font-size:14px;margin-top:-20px;margin-left:7px; ">Software Engineer, 9/2015 to Present – Harbor Capital Advisors, Chicago, IL</p>
 		<table class="table">
 			<thead>
 				<tr>
-					<th style="border-bottom: 2px solid #fff;"><span class="glyphicon glyphicon-ok"></span></th>
 					<th style="border-bottom: 2px solid #fff;">Application Development:</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td style="border-bottom: 1px solid #fff;"></td>
-					<td style="border-bottom: 2px solid #eee;">
-						<p>Developed web application to streamline documents data collection and processing to workday server with Spring framework and token based authentication. This application cuts user time by 70% and significantly reduced human error.</p>
+					<td style="border-bottom: 2px solid #fff;" align="justify">
+						<p><span class="glyphicon glyphicon-ok"></span>&nbsp;Developed application to streamline documents data collection and process which cuts user time by 70% and significantly reduced human error.</p>
+						<p><span class="glyphicon glyphicon-ok"></span>&nbsp;Developed application to dynamically generate fund reports with XML, XSL, Java(multithreading), and the Apache XML Formatting framework (FOP). </p>
 						<h4 style="font-size:14px;">
-							<span class="label label-default">Spring Boot</span>
-							<span class="label label-default">Spring MVC</span>
-							<span class="label label-default">Spring Security OAuth</span>
-							<span class="label label-default">Spring Data JPA</span>
+							<span class="label label-default">Java</span>
+							<span class="label label-default">Spring MVC & Security & OAuth2</span>
 							<span class="label label-default">Object-Oriented-Design</span>
-							<span class="label label-default">AJAX</span>
-							<span class="label label-default">Select2</span>
+							<span class="label label-default">AJAX & Select2</span>
 							<span class="label label-default">Stateless Design</span>
 						</h4>
 					</td>
 				</tr>
+
 				<tr>
-					<td style="border-bottom: 1px solid #fff;"></td>
-					<td style="border-bottom: 2px solid #eee;">
-						<p>Developed web application to dynamically generate fund reports with XML, XSL, XSLT, Java(multithreading), and the Apache XML Formatting Objects Processor (FOP). </p>
-						<h4 style="font-size:14px;">
-							<span class="label label-default">Spring Boot</span>
-							<span class="label label-default">Spring MVC</span>
-							<span class="label label-default">Spring Security OAuth</span>
-							<span class="label label-default">Object-Oriented-Design</span>
-							<span class="label label-default">AJAX</span>
-							<span class="label label-default">Select2</span>
-							<span class="label label-default">Stateless Design</span>
-						</h4>
+					<td style="border-bottom: 2px solid #fff;" align="justify">
+						<p style="margin-top:10px;"><span class="glyphicon glyphicon-ok"></span>&nbsp;Set up web scrawler and wayback machine on AWS to archive harbor websites. Created AWS Lambda function to index the new generated archives.</p>
+						<p><span class="glyphicon glyphicon-ok"></span>&nbsp;The infrastructure provides the appearance of website dating back to the oldest backup date and help Accounting team to check back on report date.</p>
+						<span class="label label-default">Docker</span>
+						<span class="label label-default">AWS ECS / S3 / Lambda Function / Route53</span>
+						<span class="label label-default">Wayback Machine & Heritrix</span>
+						<span class="label label-default">Load balancing</span>
 					</td>
 				</tr>
+
 				<tr>
-					<td style="border-bottom: 1px solid #fff;"></td>
-					<td style="border-bottom: 2px solid #eee;">
-						<p>Excelled in rapid application development and management of technological issues for assigned projects, earning the highest customer satisfaction rating for all software solution delivered.</p>
-						<span class="label label-default">Spring MVC</span> <span class="label label-default">Java</span>
-						<span class="label label-default">Database</span> <span class="label label-default">Object-Oriented-Design</span>
+					<td style="border-bottom: 2px solid #fff;"align="justify">
+						<p style="margin-top:10px;"><span class="glyphicon glyphicon-ok"></span>&nbsp;Excelled in debugging and troubleshooting and technological issues management for assigned applications on dividend record date.</p>
+						<p><span class="glyphicon glyphicon-ok"></span>&nbsp;Reduced bugs of assigned applicaiton by 50% in two years and earned high customer satisfaction rating for all software solution delivered.</p>
+						<span class="label label-default">Test & Debug</span>
+						<span class="label label-default">Issuse management</span>
+						<span class="label label-default">Version control</span>
+						<span class="label label-default">Object-Oriented-Design</span>
+						<span class="label label-default">Documentation</span>
 					</td>
 				</tr>
+
 				<tr>
-					<td style="border-bottom: 1px solid #fff;"></td>
-					<td style="border-bottom: 2px solid #eee;">
-						<p>Excelled in rapid application development and management of technological issues for assigned projects, earning the highest customer satisfaction rating for all software solution delivered.</p>
-						<span class="label label-default">Spring MVC</span> <span class="label label-default">Java</span>
-						<span class="label label-default">Database</span> <span class="label label-default">Object-Oriented-Design</span>
-					</td>
-				</tr>
-				<tr>
-					<td style="border-bottom: 1px solid #fff;"></td>
-					<td style="border-bottom: 2px solid #eee;">
-						<p>Excelled in rapid application development and management of technological issues for assigned projects, earning the highest customer satisfaction rating for all software solution delivered.</p>
-						<span class="label label-default">Spring MVC</span> <span class="label label-default">Java</span>
-						<span class="label label-default">Database</span> <span class="label label-default">Object-Oriented-Design</span>
+					<td style="border-bottom: 2px solid #fff;">
+						<p style="margin-top:10px;"><span class="glyphicon glyphicon-ok"></span>&nbsp;Created functions on AWS to power cycling AWS resources along with bussiness hour.</p>
+						<p><span class="glyphicon glyphicon-ok"></span>&nbsp;Delivered solution to backup NoSQL database records to relational database and backup and restore cloud DNS on AWS.</p>
+						<p><span class="glyphicon glyphicon-ok"></span>&nbsp;These applications significantly reduced AWS monthly cost by 60% and provided high reliability when we embark the cloud migration.</p>
+						<span class="label label-default">Python</span>
+						<span class="label label-default">AWS Lambda Function / CloudWatch / S3 / EC2 / Route53</span>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 
-		<table class="table">
+		<table class="table" style="margin-bottom:-10px;">
 			<thead>
 				<tr>
-					<th style="border-bottom: 2px solid #fff;"><span class="glyphicon glyphicon-ok"></span></th>
-					<th style="border-bottom: 2px solid #fff;">Technology Stack: Java(Spring MVC), Python, Database, HTML5/CSS3/jQuery, OOD, REST API</th>
-
+					<th style="border-bottom: 2px solid #fff;">Configuration Management:</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td style="border-bottom: 1px solid #fff;"></td>
-					<td style="border-bottom: 1px solid #fff;">
-						<p>Excelled in rapid application development and management of technological issues for assigned projects, earning the highest customer satisfaction rating for all software solution delivered.</p>
-
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<p>Excelled in rapid application development and management of technological issues for assigned projects, earning the highest customer satisfaction rating for all software solution delivered.</p>
-
+					<td style="border-bottom: 2px solid #fff;" align="justify">
+						<p><span class="glyphicon glyphicon-ok"></span>&nbsp;Used Ansible and CloudFormation template to create and manage infrastructure, provisioning and updating them in an orderly and predictable fashion.</p>
+						<p><span class="glyphicon glyphicon-ok"></span>&nbsp;Deployed applications with Docker rather than putting multiple WARs into a shared Application Server which makes configuration and deployment easier.</p>
+						<h4 style="font-size:14px;">
+							<span class="label label-default">Ansible & CloudFormation</span>
+							<span class="label label-default">Docker & confd</span>
+						</h4>
 					</td>
 				</tr>
 			</tbody>
@@ -216,11 +173,11 @@
 
 		<tbody>
 			<tr>
-				<td class="col-xs-6" style="border-left: 4px solid #428bca;border-bottom: 1px solid #fff;">Northwestern University – Evanston, IL</td>
+				<td class="col-xs-6" style="padding-left:26px;border-left: 4px solid #777;border-bottom: 1px solid #fff;">Northwestern University – Evanston, IL</td>
 				<td class="col-xs-6" style="border-bottom: 1px solid #fff;">Master of Science in Computer Engineering (GPA: 3.56/4.00)</td>
 			</tr>
 			<tr>
-				<td class="col-xs-6" style="border-left: 4px solid #428bca;border-bottom: 1px solid #fff;">Beijing Jiao tong University – Beijing, China</td>
+				<td class="col-xs-6" style="padding-left:26px;border-left: 4px solid #777;border-bottom: 1px solid #fff;">Beijing Jiao tong University – Beijing, China</td>
 				<td class="col-xs-6" style="border-bottom: 1px solid #fff;">Bachelor of Science in Electrical Engineering (GPA:3.61/4.00)</td>
 			</tr>
 		</tbody>
